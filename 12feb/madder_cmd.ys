@@ -1,0 +1,22 @@
+read_verilog madder.v
+
+hierarchy -check -top reg_adder
+
+proc
+
+opt
+
+techmap
+
+opt
+
+dfflibmap -liberty good.lib
+
+
+abc -liberty good.lib
+
+clean
+
+write_verilog -noattr madder_sys.v
+
+show -width -stretch -format svg -prefix madder_view
