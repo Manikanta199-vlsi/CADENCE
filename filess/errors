@@ -1,66 +1,13 @@
-@genus:root: 7> source vm.tcl
-Sourcing './vm.tcl' (Mon Feb 16 19:33:21 IST 2026)...
+@genus:root: 2> source vm.tcl
+Sourcing './vm.tcl' (Mon Feb 16 19:48:35 IST 2026)...
 #@ Begin verbose source ./vm.tcl
 @file(vm.tcl) 6: source mmmc.tcl
-Sourcing './mmmc.tcl' (Mon Feb 16 19:33:21 IST 2026)...
+Sourcing './mmmc.tcl' (Mon Feb 16 19:48:35 IST 2026)...
 #@ Begin verbose source ./mmmc.tcl
-@file(mmmc.tcl) 2: create_library_set \
+@file(mmmc.tcl) 5: create_library_set \
   -name lib_slow \
   -timing {/home/install/FOUNDRY/digital/90nm/dig/lib/slow.lib}
-@file(mmmc.tcl) 7: create_rc_corner \
-  -name rc_typ
-@file(mmmc.tcl) 11: create_delay_corner \
-  -name dc_slow \
-  -library_set lib_slow \
-  -rc_corner rc_typ
-Error   : A command argument did not match any of the acceptable command options. [TUI-64] [create_delay_corner]
-        : The argument in question is '-library_set'.
-        : Check the command usage and correct the input to the command.
-  create_delay_corner: create a new delay corner 
-
-Usage: create_delay_corner -name <string>
-           [-timing_condition <power_domain@timing_condition>]
-           [-early_timing_condition <power_domain@timing_condition>]
-           [-late_timing_condition <power_domain@timing_condition>]
-           [-rc_corner <rc_corner>] [-early_rc_corner <rc_corner>]
-           [-late_rc_corner <rc_corner>] [-temperature_files <string>]
-           [-early_temperature_files <string>]
-           [-late_temperature_files <string>] [-irdrop_files <string>]
-           [-early_irdrop_files <string>] [-late_irdrop_files <string>]
-           [-si_enabled {true|false}]
-
-    -name <string>:
-        name of the delay_corner 
-    [-timing_condition <power_domain@timing_condition>]:
-        list of PD@TC and supply/rail@TC of the timing condition 
-    [-early_timing_condition <power_domain@timing_condition>]:
-        list of PD@TC and supply/rail@TC of the early timing condition 
-    [-late_timing_condition <power_domain@timing_condition>]:
-        list of PD@TC and supply/rail@TC of the late timing condition 
-    [-rc_corner <rc_corner>]:
-        name of the rc_corner 
-    [-early_rc_corner <rc_corner>]:
-        name of the rc_corner 
-    [-late_rc_corner <rc_corner>]:
-        name of the rc_corner 
-    [-temperature_files <string>]:
-        temperature files 
-    [-early_temperature_files <string>]:
-        temperature files for early conditions 
-    [-late_temperature_files <string>]:
-        temperature files for late conditions 
-    [-irdrop_files <string>]:
-        irdrop files 
-    [-early_irdrop_files <string>]:
-        irdrop files for early conditions 
-    [-late_irdrop_files <string>]:
-        irdrop files for late conditions 
-    [-si_enabled {true|false}]:
-        option to control SI behavior 
-Error   : Timing condition not specified for delay corner. [TIM-414] [create_delay_corner]
-        :  
-        : Need to specify either -timing_condition or (-early_timing_condition and -late_timing_condition).
+Error   : Multiple designs are available. Specify the design you want to use. [TUI-17] [::mmmc::shutdown_timer_and_reset_init_design]
+        : There is no unique design here.
 #@ End verbose source ./mmmc.tcl
 #@ End verbose source ./vm.tcl
-1
-@genus:root: 8> 
