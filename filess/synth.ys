@@ -1,0 +1,14 @@
+read_liberty -lib slow.lib
+
+read_verilog picorv32.v
+
+synth -top picorv32
+
+dfflibmap -liberty slow.lib
+
+abc -liberty slow.lib
+
+clean
+write_verilog Spicorv32_netlist.v
+
+write_json picorv32.json
